@@ -1,0 +1,8 @@
+C:/Users/z1m0b/Cpen311/CPEN311-Lab-2/task2_tb.v {1 {vlog -work work -stats=none {C:\Users\z1m0b\Cpen311\CPEN311-Lab-2\task2_tb.v}
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module task2_tb
+
+Top level modules:
+	task2_tb
+
+} {} {}}
