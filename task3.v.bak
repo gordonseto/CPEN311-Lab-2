@@ -86,7 +86,6 @@ always @(posedge CLOCK_50) begin
 	if (loadcrit == 1)
 		if (initcrit == 1)
 			crit = 1 - RADIUS;
-			octant = 3'b000;
 			
 	drawdone <= 0;
 	if (current_state == 2'b01) begin
@@ -141,7 +140,7 @@ end
 
 always @(posedge CLOCK_50) begin
 	case (current_state)
-		2'b00: next_state <= 2'b01;
+		2'b00: next_state <= 2'b10;
 		2'b01: if (drawdone == 0) next_state <= 2'b01;
 				else next_state <= 2'b10;
 		2'b10: if (done == 0) next_state <= 2'b01;

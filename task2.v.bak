@@ -46,7 +46,7 @@ reg [1:0] next_state, current_state;
 
 // instantiate VGA adapter 
 
-vga_adapter #( .RESOLUTION("160x120"))
+/*vga_adapter #( .RESOLUTION("160x120"))
     vga_u0 (.resetn(KEY[3]),
 	         .clock(CLOCK_50),
 			   .colour(colour),
@@ -62,7 +62,7 @@ vga_adapter #( .RESOLUTION("160x120"))
 			   .VGA_SYNC(VGA_SYNC),
 			   .VGA_CLK(VGA_CLK));
 
-
+*/
 always @(posedge CLOCK_50) begin
 	if (loady == 1)
 		if (inity == 1)
@@ -99,7 +99,7 @@ end
 
 always @(posedge CLOCK_50) begin
 	case (current_state)
-		2'b00: next_state <= 2'b10;
+		2'b00: next_state <= 2'b01;
 		2'b01: next_state <= 2'b10;
 		2'b10: if (xdone == 0) next_state <= 2'b10;
 			else if (ydone == 0) next_state <= 2'b01;

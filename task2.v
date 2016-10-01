@@ -46,7 +46,7 @@ reg [1:0] next_state, current_state;
 
 // instantiate VGA adapter 
 
-vga_adapter #( .RESOLUTION("160x120"))
+/*vga_adapter #( .RESOLUTION("160x120"))
     vga_u0 (.resetn(KEY[3]),
 	         .clock(CLOCK_50),
 			   .colour(colour),
@@ -62,7 +62,7 @@ vga_adapter #( .RESOLUTION("160x120"))
 			   .VGA_SYNC(VGA_SYNC),
 			   .VGA_CLK(VGA_CLK));
 
-
+*/
 always @(posedge CLOCK_50) begin
 	if (loady == 1)
 		if (inity == 1)
@@ -76,22 +76,18 @@ always @(posedge CLOCK_50) begin
 			x = x + 8'b00000001;
 		ydone <= 0;
 		xdone <= 0;
-		if (y == SCREEN_HEIGHT - 1) begin
+		if (y == SCREEN_HEIGHT - 1)
 			ydone <= 1;
-		end
 		if (x == SCREEN_WIDTH - 1)
 			xdone <= 1;
-	if (current_state == 2'b01) 
-		colour = 3'b000;
-	else if (current_state == 2'b10)
-		colour = colour + 3'b001;
+	colour = colour + 3'b001;
 end
 
 always @(posedge CLOCK_50) begin
 	case (current_state)
 		2'b00: {initx,inity,loady,loadx,plot} <= 5'b11110;
-		2'b01: {initx,inity,loady,loadx,plot} <= 5'b10110; 
-		2'b10: {initx,inity,loady,loadx,plot} <= 5'b00011; 
+		2'b01: {initx,inity,loady,loadx,plot} <= 5'b10110;
+		2'b10: {initx,inity,loady,loadx,plot} <= 5'b00011;
 		2'b11: {initx,inity,loady,loadx,plot} <= 5'b00000;
 		default: {initx,inity,loady,loadx,plot} <= 5'b11110;
 	endcase
