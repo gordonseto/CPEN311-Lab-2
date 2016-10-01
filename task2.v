@@ -76,18 +76,22 @@ always @(posedge CLOCK_50) begin
 			x = x + 8'b00000001;
 		ydone <= 0;
 		xdone <= 0;
-		if (y == SCREEN_HEIGHT - 1)
+		if (y == SCREEN_HEIGHT - 1) begin
 			ydone <= 1;
+		end
 		if (x == SCREEN_WIDTH - 1)
 			xdone <= 1;
-	colour = colour + 3'b001;
+	if (current_state == 2'b01) 
+		colour = 3'b000;
+	else if (current_state == 2'b10)
+		colour = colour + 3'b001;
 end
 
 always @(posedge CLOCK_50) begin
 	case (current_state)
 		2'b00: {initx,inity,loady,loadx,plot} <= 5'b11110;
-		2'b01: {initx,inity,loady,loadx,plot} <= 5'b10110;
-		2'b10: {initx,inity,loady,loadx,plot} <= 5'b00011;
+		2'b01: {initx,inity,loady,loadx,plot} <= 5'b10110; 
+		2'b10: {initx,inity,loady,loadx,plot} <= 5'b00011; 
 		2'b11: {initx,inity,loady,loadx,plot} <= 5'b00000;
 		default: {initx,inity,loady,loadx,plot} <= 5'b11110;
 	endcase

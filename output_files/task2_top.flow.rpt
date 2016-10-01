@@ -1,5 +1,5 @@
 Flow report for task2_top
-Fri Sep 30 15:15:35 2016
+Fri Sep 30 16:42:50 2016
 Quartus II 64-Bit Version 14.1.1 Build 190 01/19/2015 SJ Full Version
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Sep 30 15:15:35 2016       ;
+; Flow Status                     ; Successful - Fri Sep 30 16:42:50 2016       ;
 ; Quartus II 64-Bit Version       ; 14.1.1 Build 190 01/19/2015 SJ Full Version ;
 ; Revision Name                   ; task2_top                                   ;
 ; Top-level Entity Name           ; task2                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 48 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 62                                          ;
+; Logic utilization (in ALMs)     ; 53 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 72                                          ;
 ; Total pins                      ; 40 / 457 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 57,600 / 4,065,280 ( 1 % )                  ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/30/2016 15:12:48 ;
+; Start date & time ; 09/30/2016 16:41:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; task2_top           ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 246744085514883.147527356805104 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 246744085514883.147527888505696 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
@@ -97,12 +97,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 701 MB              ; 00:00:25                           ;
-; Fitter                    ; 00:01:21     ; 1.4                     ; 2665 MB             ; 00:01:35                           ;
-; Assembler                 ; 00:00:15     ; 1.0                     ; 695 MB              ; 00:00:11                           ;
-; TimeQuest Timing Analyzer ; 00:00:14     ; 1.0                     ; 1024 MB             ; 00:00:08                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 713 MB              ; 00:00:02                           ;
-; Total                     ; 00:02:13     ; --                      ; --                  ; 00:02:21                           ;
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 699 MB              ; 00:00:23                           ;
+; Fitter                    ; 00:00:42     ; 1.4                     ; 2577 MB             ; 00:01:00                           ;
+; Assembler                 ; 00:00:11     ; 1.0                     ; 691 MB              ; 00:00:11                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 1047 MB             ; 00:00:09                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 718 MB              ; 00:00:02                           ;
+; Total                     ; 00:01:16     ; --                      ; --                  ; 00:01:45                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
