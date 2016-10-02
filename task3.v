@@ -56,7 +56,7 @@ reg done;
 reg [1:0] next_state, current_state;
 
 // instantiate VGA adapter 
-/*
+
 vga_adapter #( .RESOLUTION("160x120"))
     vga_u0 (.resetn(KEY[3]),
 	         .clock(CLOCK_50),
@@ -72,45 +72,63 @@ vga_adapter #( .RESOLUTION("160x120"))
 			   .VGA_BLANK(VGA_BLANK),
 			   .VGA_SYNC(VGA_SYNC),
 			   .VGA_CLK(VGA_CLK));
-*/
+
 
 always @(posedge CLOCK_50) begin
-	if (loady == 1)
-		if (inity == 1)
+	colour = 3'b110;
+	if (loady == 1) begin
+		if (inity == 1) begin
 			offset_y = 0;
+		end
+	end
 			
-	if (loadx == 1)
-		if (initx == 1)
+	if (loadx == 1) begin 
+		if (initx == 1) begin 
 			offset_x = RADIUS;
-			
-	if (loadcrit == 1)
-		if (initcrit == 1)
+		end
+	end
+	if (loadcrit == 1) begin
+		if (initcrit == 1) begin
 			crit = 1 - RADIUS;
 			octant = 3'b000;
-			
-	drawdone <= 0;
+		end
+	end
+	drawdone = 0;
 	if (current_state == 2'b01) begin
 		case(octant)
-			3'b000: {x, y} = {CENTER_X + offset_x, CENTER_Y + offset_y};
-			3'b001: {x, y} = {CENTER_X + offset_y, CENTER_Y + offset_x};
-			3'b010: {x, y} = {CENTER_X - offset_x, CENTER_Y + offset_y};
-			3'b011: {x, y} = {CENTER_X - offset_y, CENTER_Y + offset_x};
-			3'b100: {x, y} = {CENTER_X - offset_x, CENTER_Y - offset_y};
-			3'b101: {x, y} = {CENTER_X - offset_y, CENTER_Y - offset_x};
-			3'b110: {x, y} = {CENTER_X + offset_x, CENTER_Y - offset_y};
-			3'b111: {x, y} = {CENTER_X + offset_y, CENTER_Y - offset_x};
-			default: {x, y} = {CENTER_X, CENTER_Y};
+			3'b000: x = CENTER_X + offset_x;
+			3'b001: x = CENTER_X + offset_y;
+			3'b010: x = CENTER_X - offset_x;
+			3'b011: x = CENTER_X - offset_y;
+			3'b100: x = CENTER_X - offset_x;
+			3'b101: x = CENTER_X - offset_y;
+			3'b110: x = CENTER_X + offset_x;
+			3'b111: x = CENTER_X + offset_y;
+			default: x = CENTER_X;
 		endcase
+		case(octant)
+			3'b000: y = CENTER_Y + offset_y;
+			3'b001: y = CENTER_Y + offset_x;
+			3'b010: y = CENTER_Y + offset_y;
+			3'b011: y = CENTER_Y + offset_x;
+			3'b100: y = CENTER_Y - offset_y;
+			3'b101: y = CENTER_Y - offset_x;
+			3'b110: y = CENTER_Y - offset_y;
+			3'b111: y =  CENTER_Y - offset_x;
+			default: y = CENTER_Y;
+		endcase
+
 		if (octant == 3'b111) begin
 			octant = 3'b000;
 			drawdone = 1;
+
 		end else
 			octant = octant + 1;
 	end	
 	
 	if (current_state == 2'b10) begin
 		offset_y = offset_y + 1;
-		if (crit == 0)
+		if (crit <= 0)
 			crit = crit + 2*offset_y + 1;
 		else begin
 			offset_x = offset_x - 1;
@@ -120,8 +138,6 @@ always @(posedge CLOCK_50) begin
 		done = 0;
 		if (offset_y > offset_x)
 			done = 1;
-		
-		
 	end
 end
 
