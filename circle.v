@@ -5,7 +5,7 @@ module circle (CLOCK_50,
        VGA_VS,             
        VGA_BLANK,           
        VGA_SYNC,            
-       VGA_CLK, radius, centerx, centery, colour);
+       VGA_CLK, radius, centerx, centery, colour, donedrawingonecircle, circlereset);
   
 input CLOCK_50;
 input [3:0] KEY;
@@ -50,6 +50,9 @@ reg [7:0] offset_x;
 reg drawdone;
 reg [2:0] octant;
 reg done;
+input circlereset;
+
+output reg donedrawingonecircle;
 
 reg [1:0] next_state, current_state;
 
@@ -70,6 +73,7 @@ vga_adapter #( .RESOLUTION("160x120"))
 			   .VGA_BLANK(VGA_BLANK),
 			   .VGA_SYNC(VGA_SYNC),
 			   .VGA_CLK(VGA_CLK));
+
 
 
 always @(posedge CLOCK_50) begin
@@ -136,20 +140,27 @@ always @(posedge CLOCK_50) begin
 		if (offset_y > offset_x)
 			done = 1;
 	end
+	
+	if (current_state == 2'b11) begin
+		done = 0;
+	end
 end
 
 always @(posedge CLOCK_50) begin
 	case (current_state)
-		2'b00: {initx,inity,loady,loadx,plot, initcrit, loadcrit} <= 7'b1111011;
+		2'b00: {initx,inity,loady,loadx,plot, initcrit, loadcrit, donedrawingonecircle} <= 8'b11110110;
 		2'b01: {initx,inity,loady,loadx,plot, initcrit, loadcrit} <= 7'b0011100;
 		2'b10: {initx,inity,loady,loadx,plot, initcrit, loadcrit} <= 7'b0000000;
-		2'b11: {initx,inity,loady,loadx,plot, initcrit, loadcrit} <= 7'b0000000;
+		2'b11: {initx,inity,loady,loadx,plot, initcrit, loadcrit, donedrawingonecircle} <= 8'b00000001;
 		default: {initx,inity,loady,loadx,plot, initcrit, loadcrit} <= 7'b1111011;
 	endcase
 end
 
 always @(posedge CLOCK_50) begin
-	current_state <= next_state;
+	if (circlereset == 1) 
+		current_state <= 2'b00;
+	else 
+		current_state <= next_state;
 end
 
 always @(posedge CLOCK_50) begin
