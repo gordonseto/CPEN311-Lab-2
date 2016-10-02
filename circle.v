@@ -155,7 +155,8 @@ end
 always @(posedge CLOCK_50) begin
 	case (current_state)
 		2'b00: next_state <= 2'b01;
-		2'b01: if (drawdone == 0) next_state <= 2'b01;
+		2'b01: 	if (done == 1 ) next_state <= 2'b11;
+				else if (drawdone == 0) next_state <= 2'b01;
 				else next_state <= 2'b10;
 		2'b10: if (done == 0) next_state <= 2'b01;
 				else next_state <= 2'b11;
