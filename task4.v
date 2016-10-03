@@ -49,11 +49,11 @@ assign circlereset = donedrawingonecircle ? 1 : 0;
 	   
 always @(posedge CLOCK_50) begin
 	case (current_state)
-		3'b000: {centerx, centery, colour} = {8'b00100100, 8'b00101000, BLUE};
-		3'b001: {centerx, centery, colour} = {8'b01111100, 8'b00101000, RED};
-		3'b010: {centerx, centery, colour} = {8'b01010000, 8'b00101000, WHITE};
-		3'b011: {centerx, centery, colour} = {8'b00111010, 8'b01010000, YELLOW};
-		3'b100: {centerx, centery, colour} = {8'b01100110, 8'b01010000, GREEN};
+		3'b000: {centerx, centery, colour} = {8'b00100100, 8'b00110010, BLUE};
+		3'b001: {centerx, centery, colour} = {8'b01111100, 8'b00110010, RED};
+		3'b010: {centerx, centery, colour} = {8'b01010000, 8'b00110010, WHITE};
+		3'b011: {centerx, centery, colour} = {8'b00111010, 8'b01000110, YELLOW};
+		3'b100: {centerx, centery, colour} = {8'b01100110, 8'b01000110, GREEN};
 		default: {centerx, centery, colour} = {8'b00000000, 8'b00000000, BLACK};
 	endcase
 end

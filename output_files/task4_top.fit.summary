@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sun Oct 02 17:03:18 2016
+Fitter Status : Successful - Sun Oct 02 17:13:13 2016
 Quartus II 64-Bit Version : 14.1.1 Build 190 01/19/2015 SJ Full Version
 Revision Name : task4_top
 Top-level Entity Name : task4
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 147 / 32,070 ( < 1 % )
+Logic utilization (in ALMs) : 149 / 32,070 ( < 1 % )
 Total registers : 121
 Total pins : 40 / 457 ( 9 % )
 Total virtual pins : 0
