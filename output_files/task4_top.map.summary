@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Oct 02 16:49:08 2016
+Analysis & Synthesis Status : Successful - Sun Oct 02 16:57:48 2016
 Quartus II 64-Bit Version : 14.1.1 Build 190 01/19/2015 SJ Full Version
 Revision Name : task4_top
 Top-level Entity Name : task4
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 95
+Total registers : 104
 Total pins : 40
 Total virtual pins : 0
 Total block memory bits : 57,600
