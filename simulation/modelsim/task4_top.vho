@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 14.1.1 Build 190 01/19/2015 SJ Full Version"
 
--- DATE "10/02/2016 16:59:01"
+-- DATE "10/02/2016 17:03:47"
 
 -- 
 -- Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -4795,12 +4795,12 @@ PORT MAP (
 -- Location: LABCELL_X29_Y76_N30
 \centery~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \centery~1_combout\ = (!\current_state.011~q\ & !\current_state.100~DUPLICATE_q\)
+-- \centery~1_combout\ = (\current_state.100~DUPLICATE_q\) # (\current_state.011~q\)
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1100110000000000110011000000000011001100000000001100110000000000",
+	lut_mask => "0011001111111111001100111111111100110011111111110011001111111111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -5643,13 +5643,13 @@ PORT MAP (
 -- Location: LABCELL_X31_Y76_N33
 \DUT|Add1~17\ : cyclonev_lcell_comb
 -- Equation(s):
--- \DUT|Add1~17_sumout\ = SUM(( (!\DUT|offset_x\(1)) # ((\DUT|loady~q\ & \DUT|initx~q\)) ) + ( !centery(6) ) + ( \DUT|Add1~14\ ))
--- \DUT|Add1~18\ = CARRY(( (!\DUT|offset_x\(1)) # ((\DUT|loady~q\ & \DUT|initx~q\)) ) + ( !centery(6) ) + ( \DUT|Add1~14\ ))
+-- \DUT|Add1~17_sumout\ = SUM(( (!\DUT|offset_x\(1)) # ((\DUT|loady~q\ & \DUT|initx~q\)) ) + ( centery(6) ) + ( \DUT|Add1~14\ ))
+-- \DUT|Add1~18\ = CARRY(( (!\DUT|offset_x\(1)) # ((\DUT|loady~q\ & \DUT|initx~q\)) ) + ( centery(6) ) + ( \DUT|Add1~14\ ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000000000001111111100000000000000001111111100010001",
+	lut_mask => "0000000000000000111111110000000000000000000000001111111100010001",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -5787,13 +5787,13 @@ PORT MAP (
 -- Location: LABCELL_X31_Y76_N0
 \DUT|Add3~13\ : cyclonev_lcell_comb
 -- Equation(s):
--- \DUT|Add3~13_sumout\ = SUM(( (\DUT|offset_x\(1) & ((!\DUT|initx~q\) # (!\DUT|loady~q\))) ) + ( !centery(6) ) + ( !VCC ))
--- \DUT|Add3~14\ = CARRY(( (\DUT|offset_x\(1) & ((!\DUT|initx~q\) # (!\DUT|loady~q\))) ) + ( !centery(6) ) + ( !VCC ))
+-- \DUT|Add3~13_sumout\ = SUM(( (\DUT|offset_x\(1) & ((!\DUT|initx~q\) # (!\DUT|loady~q\))) ) + ( centery(6) ) + ( !VCC ))
+-- \DUT|Add3~14\ = CARRY(( (\DUT|offset_x\(1) & ((!\DUT|initx~q\) # (!\DUT|loady~q\))) ) + ( centery(6) ) + ( !VCC ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000000000001111111100000000000000000000000011111100",
+	lut_mask => "0000000000000000111111110000000000000000000000000000000011111100",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -5945,13 +5945,13 @@ PORT MAP (
 -- Location: LABCELL_X33_Y76_N0
 \DUT|Add4~13\ : cyclonev_lcell_comb
 -- Equation(s):
--- \DUT|Add4~13_sumout\ = SUM(( (\DUT|offset_y\(1) & ((!\DUT|loady~q\) # (!\DUT|initx~q\))) ) + ( !centery(6) ) + ( !VCC ))
--- \DUT|Add4~14\ = CARRY(( (\DUT|offset_y\(1) & ((!\DUT|loady~q\) # (!\DUT|initx~q\))) ) + ( !centery(6) ) + ( !VCC ))
+-- \DUT|Add4~13_sumout\ = SUM(( (\DUT|offset_y\(1) & ((!\DUT|loady~q\) # (!\DUT|initx~q\))) ) + ( centery(6) ) + ( !VCC ))
+-- \DUT|Add4~14\ = CARRY(( (\DUT|offset_y\(1) & ((!\DUT|loady~q\) # (!\DUT|initx~q\))) ) + ( centery(6) ) + ( !VCC ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000000011110000111100000000000000000000000011101110",
+	lut_mask => "0000000000000000111100001111000000000000000000000000000011101110",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -6106,13 +6106,13 @@ PORT MAP (
 -- Location: LABCELL_X33_Y76_N33
 \DUT|Add2~17\ : cyclonev_lcell_comb
 -- Equation(s):
--- \DUT|Add2~17_sumout\ = SUM(( (!\DUT|offset_y\(1)) # ((\DUT|loady~q\ & \DUT|initx~q\)) ) + ( !centery(6) ) + ( \DUT|Add2~14\ ))
--- \DUT|Add2~18\ = CARRY(( (!\DUT|offset_y\(1)) # ((\DUT|loady~q\ & \DUT|initx~q\)) ) + ( !centery(6) ) + ( \DUT|Add2~14\ ))
+-- \DUT|Add2~17_sumout\ = SUM(( (!\DUT|offset_y\(1)) # ((\DUT|loady~q\ & \DUT|initx~q\)) ) + ( centery(6) ) + ( \DUT|Add2~14\ ))
+-- \DUT|Add2~18\ = CARRY(( (!\DUT|offset_y\(1)) # ((\DUT|loady~q\ & \DUT|initx~q\)) ) + ( centery(6) ) + ( \DUT|Add2~14\ ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000000000001111111100000000000000001111111100010001",
+	lut_mask => "0000000000000000111111110000000000000000000000001111111100010001",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (

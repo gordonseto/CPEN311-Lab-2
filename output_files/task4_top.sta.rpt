@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for task4_top
-Sun Oct 02 16:58:57 2016
+Sun Oct 02 17:03:44 2016
 Quartus II 64-Bit Version 14.1.1 Build 190 01/19/2015 SJ Full Version
 
 
@@ -1106,7 +1106,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 14.1.1 Build 190 01/19/2015 SJ Full Version
-    Info: Processing started: Sun Oct 02 16:58:48 2016
+    Info: Processing started: Sun Oct 02 17:03:34 2016
 Info: Command: quartus_sta task4 -c task4_top
 Info: qsta_default_script.tcl version: #3
 Warning (20013): Ignored assignments for entity "DE1_SoC" -- entity does not exist in design
@@ -1797,8 +1797,8 @@ Info (332146): Worst-case minimum pulse width slack is 1.666
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 573 warnings
-    Info: Peak virtual memory: 1053 megabytes
-    Info: Processing ended: Sun Oct 02 16:58:57 2016
+    Info: Peak virtual memory: 1051 megabytes
+    Info: Processing ended: Sun Oct 02 17:03:43 2016
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:09
 

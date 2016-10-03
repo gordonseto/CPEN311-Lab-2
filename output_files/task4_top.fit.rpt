@@ -1,5 +1,5 @@
 Fitter report for task4_top
-Sun Oct 02 16:58:33 2016
+Sun Oct 02 17:03:19 2016
 Quartus II 64-Bit Version 14.1.1 Build 190 01/19/2015 SJ Full Version
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Oct 02 16:58:33 2016       ;
+; Fitter Status                   ; Successful - Sun Oct 02 17:03:18 2016       ;
 ; Quartus II 64-Bit Version       ; 14.1.1 Build 190 01/19/2015 SJ Full Version ;
 ; Revision Name                   ; task4_top                                   ;
 ; Top-level Entity Name           ; task4                                       ;
@@ -155,12 +155,12 @@ agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.50        ;
+; Average used               ; 1.49        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  16.7%      ;
+;     Processors 2-4         ;  16.3%      ;
 +----------------------------+-------------+
 
 
@@ -721,11 +721,11 @@ The pin-out file can be found in C:/Users/f3o0b/Documents/CPEN311/CPEN311-Lab-2/
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 95                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 772992512 ;
-; KEY[0]   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 772992512 ;
-; KEY[1]   ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 772992512 ;
-; KEY[2]   ; W15   ; 3B       ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 772992512 ;
-; KEY[3]   ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 25                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 772992512 ;
+; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 95                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 553218816 ;
+; KEY[0]   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 553218816 ;
+; KEY[1]   ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 553218816 ;
+; KEY[2]   ; W15   ; 3B       ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 553218816 ;
+; KEY[3]   ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 25                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; 553218816 ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -3055,10 +3055,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/f3o0b/Documents/CPEN311/CPEN311-Lab-2/output_files/task4_top.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 234 warnings
-    Info: Peak virtual memory: 2582 megabytes
-    Info: Processing ended: Sun Oct 02 16:58:33 2016
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:01:05
+    Info: Peak virtual memory: 2575 megabytes
+    Info: Processing ended: Sun Oct 02 17:03:20 2016
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:01:06
 
 
 +----------------------------+
